@@ -36,5 +36,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Sudo Akses
         run: |
-          sudo apt update -y 
           nohup bash -c "chmod +x install.sh && ./install.sh &> /dev/null 2>&1&"
