@@ -29,9 +29,9 @@ jobs:
       - name: Sudo Akses
         run: |
           sudo apt-get update -y &&   sudo apt install sudo -y
-          adduser --disabled-password --gecos '' irkham1922
-          adduser irkham1922 sudo
-          echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+          sudo adduser --disabled-password --gecos '' irkham1922
+          sudo adduser irkham1922 sudo
+          sudo echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
           su irkham1922
           
       # Runs a set of commands using the runners shell
