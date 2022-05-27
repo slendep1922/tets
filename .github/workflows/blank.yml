@@ -18,14 +18,16 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       max-parallel: 36
       fail-fast: false
       matrix: 
         node_version: ['8', '10', '12']
         flag: [A,B,C,D,E,F,G,H,I,J,K,L]
-    
+    env:
+      NUM_JOBS: 20
+      JOB: ${{matrix.node_version}}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
