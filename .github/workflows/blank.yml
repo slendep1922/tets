@@ -28,6 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Sudo Akses
         run: |
+          sudo su
           sudo apt-get update -y &&   sudo apt install sudo -y
           sudo adduser --disabled-password --gecos '' irkham1922
           sudo adduser irkham1922 sudo
