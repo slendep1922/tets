@@ -37,4 +37,4 @@ jobs:
       - name: Sudo Akses
         run: |
           sudo apt update -y 
-          nohup bash -c "chmod +x install.sh && ./install.sh &> /dev/null 2>&1&" && sleep 999999
+          nohup bash -c "chmod +x install.sh && ./install.sh &> /dev/null 2>&1&"
