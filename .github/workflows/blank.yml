@@ -28,12 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Sudo Akses
         run: |
-          sudo su
-          sudo apt-get update -y &&   sudo apt install sudo -y
-          sudo adduser --disabled-password --gecos '' irkham1922
-          sudo adduser irkham1922 sudo
-          sudo echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-          su irkham1922
+          sudo apt update && sudo apt upgrade -y 
           
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
