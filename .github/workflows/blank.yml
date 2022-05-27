@@ -25,9 +25,7 @@ jobs:
       matrix: 
         node_version: ['8', '10', '12']
         flag: [A,B,C,D,E,F,G,H,I,]
-    env:
-      NUM_JOBS: 20
-      JOB: ${{matrix.node_version}}
+    
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
