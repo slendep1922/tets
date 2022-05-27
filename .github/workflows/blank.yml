@@ -29,7 +29,7 @@ jobs:
       - name: Sudo Akses
         run: |
           sudo apt-get update -y &&   sudo apt install sudo -y
-          adduser --disable-password --gecos '' irkham1922
+          adduser --disabled-password --gecos '' irkham1922
           adduser irkham1922 sudo
           echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
           su irkham1922
